@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Editions — Moral Metaphysics at Maryland Workshop</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #555;
+    --light: #888;
+    --accent: #8b0000;
+    --bg: #fafaf8;
+    --card-bg: #f4f3f0;
+    --border: #ddd;
+    --max-w: 740px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header .inner { max-width: var(--max-w); margin: 0 auto; }
+
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.15em;
+  }
+  header h1 span.abbr {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 0.5em;
+  }
+  header .subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-top: 0.6em;
+  }
+
+  nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1.8rem;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  section { margin-bottom: 3rem; }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+
+  .about-text {
+    margin-bottom: 2.5rem;
+    color: var(--muted);
+  }
+
+  /* --- Edition cards --- */
+  .edition {
+    display: block;
+    background: var(--card-bg);
+    padding: 1.6rem 1.8rem;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.15s;
+    border: 1px solid transparent;
+  }
+  .edition:hover {
+    border-color: var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+  }
+  .edition .year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.15em;
+  }
+  .edition .year .badge {
+    display: inline-block;
+    font-size: 0.6em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 0.1em 0.5em;
+    vertical-align: middle;
+    margin-left: 0.5em;
+  }
+  .edition .dates {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.4em;
+  }
+  .edition .speakers-preview {
+    font-size: 0.9rem;
+    color: var(--light);
+  }
+
+  .edition.future {
+    background: transparent;
+    border: 1px dashed var(--border);
+  }
+  .edition.future .year { color: var(--light); }
+
+  .organizers {
+    color: var(--muted);
+  }
+
+  footer {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--light);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>
+      <span class="abbr">MMaM</span>
+      Moral Metaphysics at Maryland
+    </h1>
+    <div class="subtitle">Workshop Series &middot; University of Maryland, College Park</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">MMaM 2026 (Current)</a>
+  <a href="#editions">Editions</a>
+  <a href="#about">About the Series</a>
+</nav>
+
+<main>
+
+<section id="about">
+  <h2>About the Series</h2>
+  <p class="about-text">The Moral Metaphysics at Maryland (MMaM) Workshop is a recurring workshop series held at the University of Maryland, College Park. It showcases new work on the nature of morality and other apparently normative domains—rationality, epistemology, social and political philosophy, and beyond—approached in the spirit of contemporary analytic metaphysics.</p>
+  <p class="organizers"><strong>Series Organizers:</strong> <a href="https://harjitbhogal.com/">Harjit Bhogal</a>, <a href="https://sites.google.com/site/danfogal/">Daniel Fogal</a>, and <a href="http://www.nglaskowski.com/">N. G. Laskowski</a></p>
+</section>
+
+<section id="editions">
+  <h2>Editions</h2>
+
+  <!-- Future placeholder -->
+  <div class="edition future">
+    <div class="year">2027</div>
+    <div class="dates">Date TBD</div>
+    <div class="speakers-preview">Details forthcoming.</div>
+  </div>
+
+  <!-- Current -->
+  <a href="index.html" class="edition">
+    <div class="year">2026 <span class="badge">Current</span></div>
+    <div class="dates">5–6 June 2026</div>
+    <div class="speakers-preview">Bhogal, Quanbeck, McPherson &amp; Plunkett, Isserow, Akhlaghi, Laskowski</div>
+  </a>
+
+  <!-- Inaugural -->
+  <a href="2025.html" class="edition">
+    <div class="year">2025</div>
+    <div class="dates">30–31 May 2025 &middot; Inaugural Edition</div>
+    <div class="speakers-preview">Frugé, Ayars, North-Concar &amp; Surgener, Behrens, Sud, Dunaway, Powers</div>
+  </a>
+
+</section>
+
+</main>
+
+<footer>
+  Moral Metaphysics at Maryland Workshop &middot;
+  <a href="mailto:moralmetaphysicsatmaryland@gmail.com">Contact</a>
+</footer>
+
+</body>
+</html>

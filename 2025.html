@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMaM 2025 — Moral Metaphysics at Maryland Workshop</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #555;
+    --light: #888;
+    --accent: #8b0000;
+    --bg: #fafaf8;
+    --card-bg: #f4f3f0;
+    --border: #ddd;
+    --max-w: 740px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header .inner { max-width: var(--max-w); margin: 0 auto; }
+
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.15em;
+  }
+  header h1 span.abbr {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 0.5em;
+  }
+  header h1 span.inaugural {
+    display: block;
+    font-size: 0.5em;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 0.3em;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  header .meta {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-top: 0.6em;
+  }
+  header .meta .date { font-style: italic; }
+
+  nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1.8rem;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  section { margin-bottom: 3rem; }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+
+  .day-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 2rem 0 1rem;
+    color: var(--text);
+  }
+  .day-label:first-child { margin-top: 0; }
+
+  .talk {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
+  }
+  .talk .time {
+    font-variant-numeric: tabular-nums;
+    color: var(--light);
+    font-size: 0.92rem;
+    margin-bottom: 0.2em;
+  }
+  .talk .speaker {
+    font-weight: 700;
+    font-size: 1.02rem;
+  }
+  .talk .affiliation {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .talk .title {
+    font-style: italic;
+    margin-top: 0.3em;
+  }
+  .talk .chair {
+    font-size: 0.88rem;
+    color: var(--light);
+    margin-top: 0.2em;
+  }
+
+  .break {
+    color: var(--light);
+    font-style: italic;
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .info-grid { grid-template-columns: 1fr; }
+  }
+  .info-card {
+    background: var(--card-bg);
+    padding: 1.2rem 1.4rem;
+    border-radius: 4px;
+  }
+  .info-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--light);
+    margin-bottom: 0.5em;
+    font-weight: 400;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .speakers-list {
+    column-count: 2;
+    column-gap: 2rem;
+    list-style: none;
+    padding: 0;
+  }
+  @media (max-width: 560px) {
+    .speakers-list { column-count: 1; }
+  }
+  .speakers-list li {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  .speakers-list .name { font-weight: 700; }
+  .speakers-list .aff {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  footer {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--light);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>
+      <span class="abbr">MMaM 2025</span>
+      Moral Metaphysics at Maryland
+      <span class="inaugural">Inaugural Edition</span>
+    </h1>
+    <div class="meta">
+      <span class="date">30–31 May 2025</span><br>
+      University of Maryland, College Park
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">MMaM 2026 (Current)</a>
+  <a href="#program">Program</a>
+  <a href="#speakers">Speakers</a>
+  <a href="editions.html">All Editions</a>
+</nav>
+
+<main>
+
+<!-- ======== PROGRAM ======== -->
+<section id="program">
+  <h2>Program</h2>
+
+  <div class="info-card" style="margin-bottom:2rem;">
+    <h3>Venue</h3>
+    <p>John S. Toll Physics Building, Room 2214<br>University of Maryland, College Park</p>
+  </div>
+
+  <p class="day-label">Friday, 30 May</p>
+
+  <div class="break">12:30 pm — Coffee</div>
+
+  <div class="talk">
+    <div class="time">1:00 – 2:20 pm</div>
+    <div class="speaker">Christopher Frugé</div>
+    <div class="affiliation">University of Oxford</div>
+    <div class="title">World Mirroring Mind</div>
+    <div class="chair">Chair: Zach Thornton (Virginia Tech)</div>
+  </div>
+
+  <div class="talk">
+    <div class="time">2:30 – 3:50 pm</div>
+    <div class="speaker">Alisabeth Ayars</div>
+    <div class="affiliation">Washington University in St. Louis</div>
+    <div class="title">The Epistemic Pull of Affect: Why Affect is Not Mere Appearance</div>
+    <div class="chair">Chair: Zach Barnett (Notre Dame)</div>
+  </div>
+
+  <div class="talk">
+    <div class="time">4:00 – 5:30 pm</div>
+    <div class="speaker">Oscar North-Concar &amp; Kirk Surgener</div>
+    <div class="affiliation">University of Warwick</div>
+    <div class="title">Addressing Metaskepticism</div>
+    <div class="chair">Chair: Joe Gurrola (Maryland)</div>
+  </div>
+
+  <div class="break">6:30 pm — Dinner (speakers and chairs)</div>
+
+  <p class="day-label">Saturday, 31 May</p>
+
+  <div class="break">9:30 am — Coffee</div>
+
+  <div class="talk">
+    <div class="time">10:00 – 11:20 am</div>
+    <div class="speaker">Singa Behrens</div>
+    <div class="affiliation">Goethe University Frankfurt</div>
+    <div class="title">The Structure of Normativity, or Why Too Many Primitives Spoil the Broth</div>
+  </div>
+
+  <div class="talk">
+    <div class="time">11:30 am – 12:50 pm</div>
+    <div class="speaker">Rohan Sud</div>
+    <div class="affiliation">Virginia Tech</div>
+    <div class="title">Oughts and Coherence</div>
+    <div class="chair">Chair: Lia Curtis Fine (Maryland)</div>
+  </div>
+
+  <div class="break">12:50 – 2:00 pm — Lunch (catered)</div>
+
+  <div class="talk">
+    <div class="time">2:00 – 3:20 pm</div>
+    <div class="speaker">Billy Dunaway</div>
+    <div class="affiliation">University of Missouri, St. Louis</div>
+    <div class="title">The Prospects for Normative Metaphysics: Analyticity with Substantive Truth</div>
+    <div class="chair">Chair: Pierce Neal (Johns Hopkins)</div>
+  </div>
+
+  <div class="talk">
+    <div class="time">3:30 – 4:50 pm</div>
+    <div class="speaker">Audrey Powers</div>
+    <div class="affiliation">University of Vienna</div>
+    <div class="title">Moral Laws, Governance, and Contingency</div>
+    <div class="chair">Chair: Shannon Chang (Michigan)</div>
+  </div>
+
+  <div class="break">7:00 pm — Dinner (speakers and chairs)</div>
+
+</section>
+
+<!-- ======== SPEAKERS ======== -->
+<section id="speakers">
+  <h2>Speakers</h2>
+  <ul class="speakers-list">
+    <li><span class="name">Alisabeth Ayars</span><br><span class="aff">Washington University in St. Louis</span></li>
+    <li><span class="name">Singa Behrens</span><br><span class="aff">Goethe University Frankfurt</span></li>
+    <li><span class="name">Billy Dunaway</span><br><span class="aff">University of Missouri, St. Louis</span></li>
+    <li><span class="name">Christopher Frugé</span><br><span class="aff">University of Oxford</span></li>
+    <li><span class="name">Oscar North-Concar</span><br><span class="aff">University of Warwick</span></li>
+    <li><span class="name">Audrey Powers</span><br><span class="aff">University of Vienna</span></li>
+    <li><span class="name">Rohan Sud</span><br><span class="aff">Virginia Tech</span></li>
+    <li><span class="name">Kirk Surgener</span><br><span class="aff">University of Warwick</span></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Moral Metaphysics at Maryland Workshop &middot;
+  <a href="editions.html">All Editions</a> &middot;
+  <a href="index.html">Current Edition</a>
+</footer>
+
+</body>
+</html>

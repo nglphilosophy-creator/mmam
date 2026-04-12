@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMaM 2026 — Moral Metaphysics at Maryland Workshop</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #555;
+    --light: #888;
+    --accent: #8b0000;
+    --bg: #fafaf8;
+    --card-bg: #f4f3f0;
+    --border: #ddd;
+    --max-w: 740px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* --- Header / Hero --- */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header .inner { max-width: var(--max-w); margin: 0 auto; }
+
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.15em;
+  }
+  header h1 span.abbr {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 0.5em;
+  }
+
+  header .meta {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-top: 0.6em;
+  }
+  header .meta .date { font-style: italic; }
+
+  /* --- Nav --- */
+  nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1.8rem;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  /* --- Main --- */
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  section { margin-bottom: 3rem; }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+
+  /* --- Program --- */
+  .day-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 2rem 0 1rem;
+    color: var(--text);
+  }
+  .day-label:first-child { margin-top: 0; }
+
+  .talk {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
+  }
+  .talk .time {
+    font-variant-numeric: tabular-nums;
+    color: var(--light);
+    font-size: 0.92rem;
+    margin-bottom: 0.2em;
+  }
+  .talk .speaker {
+    font-weight: 700;
+    font-size: 1.02rem;
+  }
+  .talk .affiliation {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .talk .title {
+    font-style: italic;
+    margin-top: 0.3em;
+  }
+  .talk .abstract {
+    margin-top: 0.5em;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .talk .abstract summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-style: normal;
+    font-size: 0.88rem;
+  }
+
+  .break {
+    color: var(--light);
+    font-style: italic;
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  /* --- Info cards --- */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .info-grid { grid-template-columns: 1fr; }
+  }
+  .info-card {
+    background: var(--card-bg);
+    padding: 1.2rem 1.4rem;
+    border-radius: 4px;
+  }
+  .info-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--light);
+    margin-bottom: 0.5em;
+    font-weight: 400;
+  }
+  .info-card p, .info-card li {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .info-card ul { list-style: none; padding: 0; }
+  .info-card li { margin-bottom: 0.3em; }
+
+  /* --- Map --- */
+  .map-container {
+    margin-top: 1.5rem;
+  }
+  .map-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  .map-caption {
+    font-size: 0.85rem;
+    color: var(--light);
+    margin-top: 0.4em;
+  }
+
+  /* --- Why section --- */
+  .why {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* --- Organizers --- */
+  .organizers {
+    font-size: 0.97rem;
+    color: var(--muted);
+  }
+
+  /* --- Contact --- */
+  .contact-box {
+    background: var(--card-bg);
+    padding: 1.4rem 1.6rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .contact-box .label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--light);
+    margin-bottom: 0.4em;
+  }
+
+  /* --- Footer --- */
+  footer {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--light);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>
+      <span class="abbr">MMaM 2026</span>
+      Moral Metaphysics at Maryland
+    </h1>
+    <div class="meta">
+      <span class="date">5–6 June 2026</span><br>
+      University of Maryland, College Park
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#program">Program</a>
+  <a href="#practical">Practical Info</a>
+  <a href="#about">About</a>
+  <a href="#contact">Attend</a>
+  <a href="editions.html">Past &amp; Future Editions</a>
+</nav>
+
+<main>
+
+<!-- ======== PROGRAM ======== -->
+<section id="program">
+  <h2>Program</h2>
+
+  <p class="day-label">Friday, 5 June</p>
+
+  <div class="talk">
+    <div class="time">1:00 – 2:30 pm</div>
+    <div class="speaker"><a href="https://harjitbhogal.com/">Harjit Bhogal</a></div>
+    <div class="affiliation">University of Maryland</div>
+    <div class="title">Moral Theories as (Merely) Metaphysical</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>TBD</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">15-minute break</div>
+
+  <div class="talk">
+    <div class="time">2:45 – 4:15 pm</div>
+    <div class="speaker"><a href="https://www.zquanbeck.com/">Z Quanbeck</a></div>
+    <div class="affiliation">NYU Center for Bioethics</div>
+    <div class="title">Moral Worth and the Strength of Reasons</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>This talk examines the implications of the metaphysical relationship between the strength of reasons, favoring, and deontic statuses for the literature on moral worth. First, I argue that on the most plausible specification of Markovits' influential "right-making feature" view, an action has moral worth to the degree that the strength of the agent's motivating reasons for performing it is not only coincident with but also proportional to the strength of their normative reasons for performing it. Non-fetishistic deliberation can thus involve attending to the strength of moral reasons. Second, I argue that whether this view collapses the distinction between "right-making feature" and "rightness itself" views of moral worth depends on the metaphysics of the strength of reasons. If the strength of a reason is identical to the degree to which it pushes an option toward some deontic status, then attending to the strength of a moral reason in deliberation involves attending to deontic statuses ("rightness") under another guise. However, if the strength of a reason is identical to the degree to which the reason favors an option—and it therefore bears a different metaphysical relationship, such as grounding, to the reason's pushing an option toward some deontic status—then attending to the strength of a moral reason needn't involve attending to deontic statuses under another guise.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">15-minute break</div>
+
+  <div class="talk">
+    <div class="time">5:00 – 6:30 pm</div>
+    <div class="speaker"><a href="https://sites.google.com/site/drtristram/">Tristram McPherson</a> &amp; <a href="https://www.plunkett.host.dartmouth.edu/">David Plunkett</a></div>
+    <div class="affiliation">Ohio State University &amp; Dartmouth College</div>
+    <div class="title">The Structure of Classificatory Metaphysics</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>We argue that several prominent metaphysical debates—including debates over physicalism in the philosophy of mind, naturalism in metaethics, and positivism in the philosophy of law—are of a kind: they are each debates about the correct metaphysical classification of various kinds of entities. We argue that this suggests that we should expect metaphysical accounts of what physicalism, naturalism, and positivism consist in to have the same generic structure. Second, we argue that there are strong reasons to favor an account of that generic structure that appeals to the idea of a metaphysical similarity class, where this contrasts strikingly with prominent accounts in terms of modal and grounding relations.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">8:00 pm — Dinner</div>
+
+  <p class="day-label">Saturday, 6 June</p>
+
+  <div class="talk">
+    <div class="time">1:00 – 2:30 pm</div>
+    <div class="speaker"><a href="https://www.jessicaisserow.com/">Jessica Isserow</a></div>
+    <div class="affiliation">University of Notre Dame</div>
+    <div class="title">Stop Trying to Make Moral Overridingness Happen. It's Not Going to Happen!</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>The Overridingness Theorist (OT) accepts The Overridingness Claim (OC), according to which moral requirements always override reasons or requirements of other kinds. This paper develops a critique of this position. I set out by articulating some difficulties that arise for OT when it comes to adjudicating conflicts between moral requirements and reasons arising from our personal commitments. Although there are different methods of adjudication available, I argue that the most promising of these commit OT to either (i) questionable normative claims or (ii) questionable moral ones. I then show that both outcomes are symptomatic of a deeper problem—one that comes into view once we conduct a closer examination of the wider philosophical paradigms in which OC is typically nested. These paradigms, I argue, either mischaracterize morality or misplace it in our normative lives. We can avoid all such problems by acknowledging, contra OT, that morality is limited in both its practical authority and its practical guidance. Doing so is not so much a setback as it is an opportunity; for it is not morality's job to tell us how to live, but ours.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">15-minute break</div>
+
+  <div class="talk">
+    <div class="time">2:45 – 4:15 pm</div>
+    <div class="speaker"><a href="https://farbodakhlaghi-g.weebly.com/">Farbod Akhlaghi</a></div>
+    <div class="affiliation">Trinity College Dublin</div>
+    <div class="title">TBD</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>TBD</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">15-minute break</div>
+
+  <div class="talk">
+    <div class="time">4:30 – 5:30 pm</div>
+    <div class="speaker"><a href="http://www.nglaskowski.com/">N. G. Laskowski</a></div>
+    <div class="affiliation">University of Maryland</div>
+    <div class="title">TBD</div>
+    <div class="abstract">
+      <details>
+        <summary>Abstract</summary>
+        <p>TBD</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="break">7:00 pm — Dinner</div>
+
+</section>
+
+<!-- ======== PRACTICAL INFO ======== -->
+<section id="practical">
+  <h2>Practical Information</h2>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Venue</h3>
+      <p>Seminar Room, Philosophy Department<br>
+      Skinner Building<br>
+      4300 Chapel Drive<br>
+      College Park, MD 20742</p>
+    </div>
+    <div class="info-card">
+      <h3>Accommodation</h3>
+      <p>Cambria Hotel, College Park<br>
+      <span style="font-size:0.88rem;">~20 min walk from the Philosophy Department</span></p>
+    </div>
+    <div class="info-card">
+      <h3>Getting to DC</h3>
+      <p>The Metro (subway) is a ~20 min walk from the Philosophy Department and ~25 min from the Cambria Hotel.</p>
+    </div>
+    <div class="info-card">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="https://linguistics.umd.edu/dining">Dining options</a></li>
+        <li><a href="https://philosophy.umd.edu/directions">Travel &amp; directions</a></li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- ======== ABOUT ======== -->
+<section id="about">
+  <h2>About</h2>
+
+  <p class="why">[To be read cheekily] MadMeta is a workshop in name only. SLACRR focuses mostly on reasons. The Chapel Hill Normativity Workshop should be called the Chapel Hill Epistemic Normativity Workshop. FrankMeta, MetaEssen, Groningen Metaethics Workshop, Cyprus Metaethics Workshop, and the Slippery Slope Normativity Summit are all too far from us (the organizers have five kids among them). Oh and metaphysics is first philosophy 😉</p>
+
+  <br>
+
+  <p class="organizers"><strong>Organizers:</strong> <a href="https://harjitbhogal.com/">Harjit Bhogal</a>, <a href="https://sites.google.com/site/danfogal/">Daniel Fogal</a>, and <a href="http://www.nglaskowski.com/">N. G. Laskowski</a></p>
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section id="contact">
+  <h2>Attend</h2>
+  <div class="contact-box">
+    <div class="label">Interested in attending?</div>
+    <a href="mailto:moralmetaphysicsatmaryland@gmail.com">moralmetaphysicsatmaryland@gmail.com</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Moral Metaphysics at Maryland Workshop &middot;
+  <a href="editions.html">All Editions</a>
+</footer>
+
+</body>
+</html>
